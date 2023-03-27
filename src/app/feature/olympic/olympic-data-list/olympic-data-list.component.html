@@ -1,0 +1,30 @@
+<div>
+  <table *ngIf="olympicData$ | async as olympicData">
+    <thead>
+      <th>Athlete</th>
+      <th>Age</th>
+      <th>Country</th>
+      <th>Year</th>
+      <th>Date</th>
+      <th>Sport</th>
+      <th>Gold</th>
+      <th>Silver</th>
+      <th>Bronze</th>
+      <th>Total</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let olympic of olympicData">
+        <td>{{ olympic.athlete }}</td>
+        <td>{{ olympic.age }}</td>
+        <td>{{ olympic.country }}</td>
+        <td>{{ olympic.year }}</td>
+        <td>{{ olympic.date }}</td>
+        <td>{{ olympic.sport }}</td>
+        <td>{{ olympic.gold }}</td>
+        <td>{{ olympic.silver }}</td>
+        <td>{{ olympic.bronze }}</td>
+        <td>{{ olympic.total }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
